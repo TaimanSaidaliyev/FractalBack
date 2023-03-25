@@ -14,4 +14,5 @@ urlpatterns = [
     path('item/project_position/add/<int:project_id>/', ProjectPositionAdd.as_view()),
     path('item/project_position/<int:position_id>/', ProjectPositionItem.as_view()),
     path('item/project_position/<int:position_id>/<int:skill_id>/', ProjectPositionSkill.as_view()),
+    path('item/project_position/user/', ProjectSetUp.as_view()),
 ]

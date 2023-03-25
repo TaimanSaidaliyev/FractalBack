@@ -56,3 +56,10 @@ class ProjectPositionListSerializer(serializers.ModelSerializer):
         fields = ('__all__')
         depth = 10
 
+
+class ProjectSetUpSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProjectPositionUsers
+        fields = ('__all__')
+        depth = 10
+

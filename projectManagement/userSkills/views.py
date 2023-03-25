@@ -173,3 +173,13 @@ class ProjectPositionSkill(APIView):
         return Response(
             'Success'
         )
+
+
+class ProjectSetUp(APIView):
+    def put(self, request):
+        record = ProjectPositionUsers.objects.get(user=request.user)
+        record.is_access = True
+        record.save()
+        return Response(
+            ProjectSetUpSerializer(record, many=False).data
+        )
