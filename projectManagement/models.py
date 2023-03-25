@@ -303,6 +303,7 @@ class SkillQuestion(models.Model):
     right_answer = models.ForeignKey('SkillQuestionAnswers', verbose_name='Ответ к вопросу', null=True, blank=True, on_delete=models.CASCADE)
     answers = models.ManyToManyField('SkillQuestionAnswers', blank=True, verbose_name='Список ответов',
                                     related_name='skill_question_answers_on')
+    recommendation = models.TextField(blank=True, verbose_name='Описание')
 
     class Meta:
         verbose_name = 'Skill Вопрос по навыку'
